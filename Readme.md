@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Irina Slukina](https://up.htmlacademy.ru/adaptive/22/user/990505).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Зольников](https://htmlacademy.ru/profile/id870391).
 
 ---
 
