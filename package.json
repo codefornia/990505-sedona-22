@@ -18,5 +18,8 @@
   ],
   "engines": {
     "node": "12.18.2"
+  },
+  "dependencies": {
+    "emmet": "^2.3.4"
   }
 }
