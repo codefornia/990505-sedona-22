@@ -20,6 +20,7 @@
     "node": "12.18.2"
   },
   "dependencies": {
+    "bemlint": "^1.7.0",
     "emmet": "^2.3.4"
   }
 }
