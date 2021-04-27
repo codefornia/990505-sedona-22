@@ -1,0 +1,19 @@
+.page-header {
+  position: relative;
+  margin: 0 auto;
+  color: $text;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  min-width: $mobile-width;
+  outline: 5px solid red;
+}
+
+.page-header__logo {
+  height: 84px;
+}
+

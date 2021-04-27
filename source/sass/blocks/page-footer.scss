@@ -1,0 +1,25 @@
+.page-footer {
+  position: relative;
+  margin: 0 auto;
+  color: $text;
+  width: 100%;
+}
+
+.page-footer__tag {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.page-footer__wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}

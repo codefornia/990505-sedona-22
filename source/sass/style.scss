@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+@charset "UTF-8";
+//Global
+@import "global/variables";
+@import "global/fonts";
+@import "global/global";
+// Blocks
+@import "blocks/button";
+@import "blocks/page-body";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/page-main";
+@import "blocks/advantages";
+@import "blocks/features";
+@import "blocks/page-footer";
+@import "blocks/search-booking";
+@import "blocks/copyright";
+@import "blocks/social-list";

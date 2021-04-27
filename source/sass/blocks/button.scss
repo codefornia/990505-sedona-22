@@ -1,0 +1,25 @@
+.button {
+  font-family: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $white;
+  padding: 14px 47px 18px 47px;
+  background-color: $button-color;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:focus {
+    background-color: $button-active;
+  }
+
+  &:disabled {
+    background-color: $button-disable;
+  }
+}

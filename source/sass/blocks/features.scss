@@ -1,0 +1,39 @@
+.features {
+  background-color: $white;
+  min-width: 320px;
+ // @media (min-width: $tablet-width) {
+ // grid-column-start: 1;
+ // grid-column-end: -1;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @media (min-width: $tablet-width) {
+    display: flex;
+}
+
+.features__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $white;
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+  }
+}
+
+.features__desc {
+  font-size: 14px;
+}

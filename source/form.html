@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
 <header class="page-header">
   <div class="page-header__wrapper">
     <nav class="main-nav page-header__main-nav">
-      <a class="main-nav__logo">
-        <img alt="герб Седоны" class="page-header__logo-image" height="84" src="img/logotype-mobile.svg"
-          width="102">
+      <a class="main-nav__logo" href="index.html">
+        <img alt="герб Седоны" class="page-header__logo-image" width="102" height="84" src="img/logotype-mobile.svg">
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a>
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
@@ -25,7 +26,7 @@
           </a>
         </li>
         <li class="main-nav__item__item main-nav__item__item--active">
-          <a class="main-nav__link" href="form.html">
+          <a class="main-nav__link">
             Форма отзыва
           </a>
         </li>
@@ -42,9 +43,9 @@
     </div>
   </div>
 </header>
-<main class="main-page">
-  <div class="main-page__wrapper">
-    <h1 class="main-page__title">Оставьте свой отзыв</h1>
+<main class="page-main">
+  <div class="page-main__wrapper">
+    <h1 class="page-main__title">Оставьте свой отзыв</h1>
     <p class="main-page__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
       достопримечательностях</p>
     <form action="https://echo.htmlacademy.ru" class="main-page__form form" method="post">
