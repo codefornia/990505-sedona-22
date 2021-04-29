@@ -1,14 +1,11 @@
 .page-body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-  min-width: 320px;
-  min-height: 100%;
-  margin: 0;
-  background-color: $white;
   font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
   color: $black;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
+  background-color: $white;
+  min-width: $mobile-width;
 }

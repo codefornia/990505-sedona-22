@@ -13,10 +13,14 @@
 .page-footer__wrapper {
   position: relative;
   margin: 0 auto;
-  width: $mobile-width;
+  min-width: $mobile-width;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
+  @media (min-width: 500px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {

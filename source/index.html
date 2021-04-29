@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>HTML Academy: Седона</title>
+  <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="img/icons/favicon-120x120.png">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
@@ -25,21 +31,19 @@
             Фото и видео
           </a>
         </li>
-        <li class="main-nav__item__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="form.html">
             Форма отзыва
           </a>
         </li>
-        <li class="main-nav__item__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="https://htmlacademy.ru/study" target="_blank">
             HTML Academy
           </a>
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro">
-      <img alt="Добро пожаловать в седону" src="img/sedona-text.svg" width="282">
-      <!--Это лучше в header или footer разместить?-->
+    <div class="page-header__intro page-header__intro--index">
     </div>
   </div>
 </header>
@@ -57,35 +61,68 @@
             <div class="advantages__content">
               <h3 class="advantages__subject">Настоящий городок</h3>
               <p class="advantages__number">&mdash; №1 &mdash;</p>
-            <p class="advantages__description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <img alt="Улица города" class="advantages__img" height="260" src="#"
-            width="320">
-        </li>
-        <li class="advantages__item features">
-          <ul class="features__list">
-            <li class="features__item features__item--accommodation">
-              <h3 class="features__title">Жильё</h3>
-              <p class="features__desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-            </li>
-            <li class="features__item features__item--souvenirs">
-              <h3 class="features__title">Сувениры</h3>
-              <p class="features__desc">Не только китайского, но и местного производства!</p>
-            </li>
+              <p class="advantages__description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <div class="advantages__picture">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo/photo-city-desktop.webp 1x, img/photo/photo-city-desktop@2x.webp 2x"
+                type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="img/photo/photo-city-tablet.webp 1x, img/photo/photo-city-tablet@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/photo/photo-city-mobile.webp 1x, img/photo/photo-city-mobile@2x.webp 2x"
+                type="image/webp">
+
+              <source media="(min-width: 1200px)"
+                srcset="img/photo/photo-city-desktop.jpg 1x, img/photo/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo/photo-city-tablet.jpg 1x, img/photo/photo-city-tablet@2x.jpg 2x">
+              <img alt="Улица города" class="advantages__img" src="img/photo/photo-city-mobile.jpg"
+                srcset="img/photo/photo-city-mobile@2x.jpg 2x">
+            </picture>
+      </div>
+      </li>
+      <li class="advantages__item features">
+        <ul class="features__list">
+          <li class="features__item features__item--accommodation">
+            <h3 class="features__title">Жильё</h3>
+            <p class="features__desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="features__item features__item--souvenirs">
+            <h3 class="features__title">Сувениры</h3>
+            <p class="features__desc">Не только китайского, но и местного производства!</p>
+          </li>
             <li class="features__item features__item--food">
               <h3 class="features__title">Еда</h3>
               <p class="features__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </ul>
         </li>
-        <li class="advantages__item advantages__item--change">
+        <li class="advantages__item advantages__item--change advantages__item--direction">
           <div class="advantages__content">
             <h3 class="advantages__subject">Там есть Мост дьявола</h3>
             <p class="advantages__number">&mdash; №2 &mdash;</p>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img alt="Мост дьявола" class="advantages__photo" height="260" src="#"
-            width="320">
-        </li>
+          <div class="advantages__picture">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo/photo-bridge-desktop.webp 1x, img/photo/photo-bridge-desktop@2x.webp 2x"
+                type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="img/photo/photo-bridge-tablet.webp 1x, img/photo/photo-bridge-tablet@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/photo/photo-bridge-mobile.webp 1x, img/photo/photo-bridge-mobile@2x.webp 2x"
+                type="image/webp">
+
+              <source media="(min-width: 1200px)"
+                srcset="img/photo/photo-bridge-desktop.jpg 1x, img/photo/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo/photo-bridge-tablet.jpg 1x, img/photo/photo-bridge-tablet@2x.jpg 2x">
+              <img alt="Мост дьявола" class="advantages__img" src="img/photo/photo-bridge-mobile.jpg"
+                srcset="img/photo/photo-bridge-mobile@2x.jpg 2x">
+            </picture>
+          </div>
         <li class="advantages__item">
           <h3 class="advantages__subject">Небольшая площадь</h3>
           <p class="advantages__number">&mdash; №3 &mdash;</p>

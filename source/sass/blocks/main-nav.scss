@@ -1,7 +1,42 @@
+.main-nav {
+  min-width: 320px;
+}
+
 .main-nav__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    flex-basis: 20%;
+    align-items: flex-start;
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+}
+
+.main-nav__logo {
+  padding: 50px;
+  position: relative;
+}
+
+.main-nav__logo img {
+  position: absolute;
+  right: 0;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
 }
 
 .main-nav__link {
@@ -17,6 +52,6 @@
   }
 
   &:focus {
-    color: red;
+    color: rgba($black, 30%);
   }
 }
