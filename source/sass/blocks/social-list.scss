@@ -2,4 +2,30 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    margin: 0;
+  }
+}
+
+.social-list__item {
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.social-list__link {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  color: $color-text-secondary;
+  background-color: $color-primary;
+  justify-content: center;
+}
+
+.social-list__icon {
+  align-self: center;
 }

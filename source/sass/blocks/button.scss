@@ -1,25 +1,31 @@
 .button {
+  box-sizing: border-box;
   font-family: inherit;
   text-transform: uppercase;
   text-align: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: $white;
-  padding: 14px 47px 18px 47px;
-  background-color: $button-color;
+  color: $color-text-secondary;
+  width: 100%;
+  padding: 16px;
+  background-color: $color-primary;
   outline: none;
   border: none;
 
+  &--booking {
+    max-width: 458px;
+  }
+
   &:hover {
-    background-color: $button-hover;
+    background-color: $color-primary-hover;
   }
 
   &:focus {
-    background-color: $button-active;
+    background-color: $color-primary-down;
   }
 
   &:disabled {
-    background-color: $button-disable;
+    background-color: $color-button-disable;
   }
 }

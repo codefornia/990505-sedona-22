@@ -1,18 +1,17 @@
 .page-main {
   position: relative;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .page-main__wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin: 0 auto;
-  min-width: 320px;
+  text-align: center;
+  min-width: $breakpoint-mobile-width;
 
-  @media (min-width: $mobile-width) {
-    width: $tablet-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-width;
+  @media (min-width: $breakpoint-desktop-width) {
+    width: $breakpoint-desktop-width;
+    margin: 0 auto;
   }
 }

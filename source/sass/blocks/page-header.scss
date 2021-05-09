@@ -3,44 +3,82 @@
 }
 
 .page-header__wrapper {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto;
   text-align: center;
-  max-width: $desktop-width;
+  min-width: $breakpoint-mobile-width;
+
+  @media (min-width: $breakpoint-desktop-width) {
+    width: $breakpoint-desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .page-header__intro {
-  background-color: $dark-grey;
+  position: relative;
+  background-color: $color-primary;
   background-repeat: no-repeat;
   background-position: 50%;
-  height: 389px;
+  padding-top: 82px;
+  padding-bottom: 86px;
+
+  &--index {
+    background-image: url("../img/backgrounds/back-mobile-index.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/back-mobile-index@2x.jpg");
+      background-size: cover;
+    }
+
+    @media (min-width: $breakpoint-mobile-width+1) {
+      background-image: url("../img/backgrounds/back-tablet-index.jpg");
+      padding-top: 77px;
+      padding-bottom: 91px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/backgrounds/back-tablet-index@2x.jpg");
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: $breakpoint-tablet-width+1) {
+      background-image: url("../img/backgrounds/back-desktop-index.jpg");
+      background-size: cover;
+      padding-top: 78px;
+      padding-bottom: 90px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/backgrounds/back-desktop-index@2x.jpg");
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop-width) {
+      padding-top: 78px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background: url("../img/intro-triangle.svg") center 0 no-repeat;
+    width: 100%;
+    height: 57px;
+  }
 }
 
-.page-header__intro--index {
-  background-image: url("../img/backgrounds/back-mobile-index.jpg");
+.page-header__img--index {
+  width: 282px;
+  height: 214px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/backgrounds/back-mobile-index@2x.jpg");
-    background-size: auto;
-  }
-
-  @media (min-width: 321px) {
-    background-image: url("../img/backgrounds/back-tablet-index.jpg");
-    height: 518px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/backgrounds/back-tablet-index@2x.jpg");
-      height: 518px;
-    }
-  }
-
-  @media (min-width: 767px) {
-    background-image: url("../img/backgrounds/back-desktop-index.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/backgrounds/back-desktop-index@2x.jpg");
-    }
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 461px;
+    height: 350px;
   }
 }

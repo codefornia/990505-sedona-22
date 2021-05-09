@@ -1,7 +1,16 @@
 .map {
+  display: block;
   text-align: center;
 }
 
 .map__img {
   position: relative;
+}
+
+.map__iframe {
+  border: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
 }
