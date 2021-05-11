@@ -2,19 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="img/icons/favicon-120x120.png">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
 <header class="page-header">
   <div class="page-header__wrapper">
     <nav class="main-nav page-header__main-nav">
-      <a class="main-nav__logo" href="index.html">
-        <img alt="герб Седоны" class="page-header__logo-image" width="102" height="84" src="img/logotype-mobile.svg">
+      <a class="main-nav__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <img alt="герб Седоны" class="main-nav__logo-image" height="84" src="img/logotype-mobile.svg" width="102">
+        </picture>
       </a>
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="main-nav__list">
+      <button class="main-nav__toggle main-nav__toggle--close" type="button"><span
+        class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list main-nav__list--close">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">
             Главная
@@ -38,17 +48,17 @@
       </ul>
     </nav>
     <div class="page-header__intro">
-      <img alt="Добро пожаловать в седону" src="img/sedona-text.svg" width="282">
-      <!--Это лучше в header или footer разместить?-->
+      <img alt="Добро пожаловать в седону" class="page-header__img" height="39"
+        src="img/backgrounds/sedona-text.svg" width="229">
     </div>
   </div>
 </header>
 <main class="page-main">
   <div class="page-main__wrapper">
     <h1 class="page-main__title">Оставьте свой отзыв</h1>
-    <p class="main-page__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+    <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
       достопримечательностях</p>
-    <form action="https://echo.htmlacademy.ru" class="main-page__form form" method="post">
+    <form action="https://echo.htmlacademy.ru" class="page-main__form form" method="post">
       <fieldset class="bio form__item">
         <legend class="bio__title">Представьтесь:</legend>
         <p class="bio__item">
@@ -120,8 +130,8 @@
       <fieldset class="user-contacts form__item">
         <legend class="user-contacts__legend">Контактная информация</legend>
         <p class="user-contacts__item">
-          <label class="user-contacts-label" for="user-tel">Контактный телефон*:</label>
-          <input class="user-contacts-input user-contacts__input--tel" id="user-tel" name="phone"
+          <label class="user-contacts__label" for="user-tel">Контактный телефон*:</label>
+          <input class="user-contacts__input user-contacts__input--tel" id="user-tel" name="phone"
             placeholder="Введите телефон" required type="tel">
         </p>
         <p class="user-contacts__item ">
@@ -130,11 +140,11 @@
             placeholder="Введите e-mail" required type="email">
         </p>
       </fieldset>
-      <fieldset>
-        <legend class="user-contacts__legend">Опишите свои эмоции:</legend>
-        <p class="user-comment__item">
+      <fieldset class="user-comment form__item">
+        <legend class="user-comment__legend">Опишите свои эмоции:</legend>
+        <p class="user-comment__comment">
           <label class="visually-hidden">Ваши эмоции:
-            <textarea class="user-contacts__textarea" name="comment"
+            <textarea class="user-comment__textarea" name="comment"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </p>

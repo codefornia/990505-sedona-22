@@ -1,0 +1,27 @@
+.pictures {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 648px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    width: 1200px;
+  }
+}
+
+.pictures__content {
+  margin: 0;
+}
+
+.picture__image {
+  width: 100%;
+}

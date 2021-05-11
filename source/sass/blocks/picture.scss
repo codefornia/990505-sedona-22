@@ -1,0 +1,100 @@
+.picture {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    background-color: $color-tertiary;
+
+    &:not(:first-child) {
+      width: 50%;
+    }
+
+    &--difference {
+      background-color: rgba(234, 234, 234, 1);
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    background-color: inherit;
+
+    &:not(:first-child) {
+      width: 33.33%;
+    }
+
+    &--difference {
+      background-color: inherit;
+    }
+  }
+}
+
+.picture__content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.picture__caption {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-self: stretch;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $color-text-secondary;
+  }
+}
+
+.picture__image {
+  display: block;
+}
+
+.picture__text {
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.picture__name {
+  position: relative;
+  font-weight: 700;
+  align-self: center;
+}
+
+.picture__author {
+  text-transform: none;
+}
+
+.picture__likes {
+  font-weight: 700;
+  align-self: center;
+  position: relative;
+}
+
+.picture__like-icon {
+  opacity: 0.3;
+  position: absolute;
+  left: -26px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    opacity: 1;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    fill: $color-background-base;
+  }
+}

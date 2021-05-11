@@ -1,0 +1,17 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentation__text {
+  max-width: 460px;
+}
+
+.presentation__video {
+  width: 100%;
+
+  @media (min-width: $breakpoint-desktop-width) {
+    max-width: 800px;
+  }
+}
