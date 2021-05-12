@@ -1,0 +1,11 @@
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  color: $color-text-primary;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: $color-background-base;
+  min-width: $breakpoint-mobile-width;
+}

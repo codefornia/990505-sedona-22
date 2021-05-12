@@ -1,0 +1,80 @@
+.features {
+  background-color: $color-background-base;
+  min-width: 320px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.features__list {
+  margin: 0;
+  list-style: none;
+  padding: 26px 18px 26px 18px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    display: flex;
+  }
+}
+
+.features__item {
+  list-style: none;
+  background-color: $color-background-base;
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.features__text {
+  text-align: left;
+  padding: 0 15px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    text-align: center;
+    padding: 30px;
+  }
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 5px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.features__desc {
+  font-size: 14px;
+  margin: 0;
+}
+
+.features__icon {
+  @media (min-width: $breakpoint-tablet-width) {
+    &--accommodation {
+      height: 72px;
+      width: 75px;
+    }
+
+    &--food {
+      width: 68px;
+      height: 76px;
+    }
+
+    &--souvenirs {
+      width: 64px;
+      height: 75px;
+    }
+  }
+}

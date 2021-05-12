@@ -1,0 +1,148 @@
+.main-nav {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__list--close {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  font-size: 18px;
+  background-color: $color-primary;
+
+  &:not(:first-child) {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+  }
+
+  :hover {
+    background-color: $color-primary-hover;
+  }
+
+  &:active {
+    background-color: $color-primary-down;
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 20%;
+    justify-content: space-between;
+    background-color: $color-background-base;
+
+    &:not(:first-child) {
+      border: none;
+    }
+
+    &:not(:last-child) {
+      border: none;
+    }
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+
+    :hover {
+      background-color: inherit;
+    }
+
+    &:active {
+      background-color: inherit;
+    }
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 22px;
+  top: 17px;
+  right: 20px;
+  z-index: 5;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-image: url("../../img/icons/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--close {
+    background-image: url("../../img/icons/icon-menu.svg");
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  color: $color-text-secondary;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    color: $color-text-primary;
+    font-size: 14px;
+  }
+
+  &--active {
+    color: rgba(118, 99, 87, 1);
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:focus {
+    color: rgba($color-text-primary, 0.3);
+  }
+}
+
+.main-nav__logo {
+  height: 58px;
+  order: 5;
+  z-index: 2;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 20%;
+  }
+}
+
+.main-nav__logo img {
+  @media (min-width: $breakpoint-desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
+}

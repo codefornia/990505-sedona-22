@@ -1,0 +1,28 @@
+.copyright {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright__description {
+  color: $color-text-primary;
+  margin: 0 8px 0 0;
+}
+
+.copyright__icon {
+  fill: black;
+
+  &:hover {
+    fill: $color-primary;
+  }
+
+  &:active {
+    fill: black;
+    opacity: 0.3;
+  }
+}
