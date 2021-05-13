@@ -1,0 +1,46 @@
+.user-comment {
+  border: none;
+  margin: 0;
+  margin-bottom: 51px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    grid-column-start: -1;
+    grid-column-end: 1;
+  }
+}
+
+.user-comment__legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.user-comment__comment {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 160px;
+}
+
+.user-comment__textarea {
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: $color-tertiary;
+  min-height: 160px;
+  padding: 13px 21px 29px 21px;
+
+  &::placeholder {
+    font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+    color: $color-text-primary;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

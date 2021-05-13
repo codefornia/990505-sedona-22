@@ -1,0 +1,31 @@
+.attractions {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    grid-column-start: -1;
+    grid-column-end: 1;
+  }
+}
+
+.attractions__legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.attractions__list {
+  text-transform: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

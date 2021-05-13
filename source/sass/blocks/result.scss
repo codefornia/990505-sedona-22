@@ -1,0 +1,48 @@
+.result {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 20px 0 20px 60px;
+  text-align: left;
+}
+
+.result__input {
+  appearance: none;
+
+  &:checked + .result__radio::before {
+    content: url("../../img/icons/radio.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+  }
+
+  &:active + .result__radio::before {
+    content: url("../../img/icons/radio.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    opacity: 0.3;
+  }
+}
+
+.result__radio {
+  position: absolute;
+  left: 1px;
+  top: 7px;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $color-tertiary;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  &:hover {
+    background-color: $color-form-hover;
+  }
+
+  &:active {
+    background-color: $color-form-down;
+  }
+}

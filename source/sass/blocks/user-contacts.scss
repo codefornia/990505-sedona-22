@@ -1,0 +1,91 @@
+.user-contacts {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    grid-column-start: -1;
+    grid-column-end: 1;
+  }
+}
+
+.user-contacts__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-contacts__legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.user-contacts__label {
+  text-align: left;
+}
+
+.user-contacts__inputs {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    z-index: 2;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: $color-form-complementary;
+  }
+
+  &--mail::before {
+    background-image: url("../../img/icons/mail.svg");
+  }
+
+  &--tel::before {
+    background-image: url("../../img/icons/phone.svg");
+  }
+}
+
+.user-contacts__input {
+  background-color: $color-tertiary;
+  border: none;
+  min-height: 58px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0;
+  padding-left: 15px;
+  width: 100%;
+
+  &::placeholder {
+    font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+    color: $color-text-primary;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.user-contacts__icons {
+  box-sizing: border-box;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  background-color: $color-form-complementary;
+  justify-content: center;
+}
+
+.user-contacts__icon {
+  align-self: center;
+}

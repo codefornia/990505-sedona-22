@@ -23,6 +23,7 @@
 
   &:focus {
     background-color: $color-primary-down;
+    color: rgba($color-text-secondary, 0.3);
   }
 
   &:disabled {
