@@ -2,8 +2,16 @@
   position: relative;
   display: block;
   cursor: pointer;
-  padding: 20px 0 20px 60px;
   text-align: left;
+  padding: 20px 0 20px 68px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 22px 0 20px 68px;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 22px 5px 20px 69px;
+  }
 }
 
 .option__input {

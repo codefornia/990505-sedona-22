@@ -2,27 +2,63 @@
   display: flex;
   flex-direction: column;
   border: none;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    order: 1;
+    padding: 0 0 0 57px;
+
+    @media (min-width: $breakpoint-desktop-width) {
+      padding: 0 0 0 79px;
+    }
+  }
 }
 
 .bio__legend {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  padding-bottom: 20px;
 
   @media (min-width: $breakpoint-tablet-width) {
     font-size: 21px;
     line-height: 26px;
+    text-align: left;
+    margin-bottom: 38px;
+  }
+}
+
+.bio__list {
+  text-transform: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 19px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding-bottom: 0;
   }
 }
 
 .bio__item {
   display: flex;
   align-items: center;
+  margin: 0;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
 }
 
 .bio__label {
-  padding-right: 15px;
+  padding-right: 16px;
+  text-transform: uppercase;
+  padding-top: 4px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding-top: 0;
+  }
 }
+
 
 .bio__input {
   box-sizing: border-box;
@@ -30,11 +66,12 @@
   min-height: 58px;
   width: 100%;
   border: none;
-  padding: 20px;
+  padding: 16px 16px 16px 18px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: $color-text-primary;
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
 
   &:hover {
     background-color: $color-form-hover;
@@ -47,5 +84,9 @@
 
   &::placeholder {
     color: $color-text-primary;
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 16px 16px 16px 21px;
   }
 }

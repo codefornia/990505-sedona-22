@@ -1,5 +1,8 @@
 .page-footer {
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .page-footer__wrapper {
@@ -10,17 +13,22 @@
   margin: 0 auto;
   text-align: center;
   min-width: $breakpoint-mobile-width;
-  padding: 40px 60px 40px 60px;
+  padding: 0 30px 30px 30px;
+
+  &--index {
+    padding: 30px 30px 30px 30px;
+  }
 
   @media (min-width: $breakpoint-tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 30px 60px 30px 60px;
+    align-items: center;
   }
 
   @media (min-width: $breakpoint-desktop-width) {
     width: $breakpoint-desktop-width;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 30px 120px 43px 120px;
   }
 }
 
@@ -28,7 +36,7 @@
   font-size: 21px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   @media (min-width: $breakpoint-tablet-width) {
     margin: 0;

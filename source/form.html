@@ -19,6 +19,7 @@
       <a class="main-nav__logo" href="index.html">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
           <img alt="герб Седоны" class="main-nav__logo-image" height="84" src="img/logotype-mobile.svg" width="102">
         </picture>
       </a>
@@ -48,39 +49,46 @@
       </ul>
     </nav>
     <div class="page-header__intro">
-      <img alt="Добро пожаловать в седону" class="page-header__img" height="39"
-        src="img/backgrounds/sedona-text.svg" width="229">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/backgrounds/sedona-text-desctop.svg">
+        <source media="(min-width: 768px)" srcset="img/backgrounds/sedona-text-tablet.svg">
+        <img alt="Добро пожаловать в седону" class="page-header__img" height="39"
+          src="img/backgrounds/sedona-text.svg" width="229">
+      </picture>
     </div>
   </div>
 </header>
 <main class="page-main">
-  <div class="page-main__wrapper">
-    <h1 class="page-main__title">Оставьте свой отзыв</h1>
+  <div class="page-main__wrapper page-main__wrapper--form">
+    <h1 class="page-main__title page-main__title--form">Оставьте свой отзыв</h1>
     <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
       достопримечательностях</p>
     <form action="https://echo.htmlacademy.ru" class="page-main__form form" method="post">
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--bio">
         <fieldset class="bio form__item">
           <legend class="bio__legend">Представьтесь:</legend>
-          <p class="bio__item">
+          <ul class="bio__list">
+          <li class="bio__item">
             <label class="bio__label" for="bio-name">Имя*:</label>
-            <input class="bio__input" id="bio-name" name="name" placeholder="Петр" type="text">
-          </p>
-          <p class="bio__item">
+            <input class="bio__input" id="bio-name" required name="name" placeholder="Петр" type="text">
+          </li>
+          <li class="bio__item">
             <label class="bio__label" for="bio-surname">Фамилия*:</label>
-            <input class="bio__input" id="bio-surname" name="surname" placeholder="Иванов" type="text">
-          </p>
-          <p class="bio__item">
-            <label class="bio__label" for="bio-middle-name">Отчество</label>
+            <input class="bio__input" id="bio-surname" required name="surname" placeholder="Иванов" type="text">
+          </li>
+          <li class="bio__item">
+            <label class="bio__label" for="bio-middle-name">Отчество:</label>
             <input class="bio__input" id="bio-middle-name" name="middle-name" placeholder="Александрович" type="text">
-          </p>
+          </li>
+          </ul>
         </fieldset>
       </div>
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--usercontacts">
         <fieldset class="user-contacts form__item">
-          <legend class="user-contacts__legend">Контактная информация</legend>
+          <legend class="user-contacts__legend">Контактная информация:</legend>
           <div class="user-contacts__item">
-            <label class="user-contacts__label" for="user-tel">Контактный телефон*:</label>
+            <label class="user-contacts__label" for="user-tel"><span class="user-contacts__hidden">Контактный </span>
+              телефон*:</label>
           <div class="user-contacts__inputs user-contacts__inputs--tel">
             <input class="user-contacts__input" id="user-tel" name="phone"
               placeholder="Введите телефон" required type="tel">
@@ -95,7 +103,7 @@
           </div>
         </fieldset>
       </div>
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--impression">
         <fieldset class="impression form__item">
           <legend class="impression__legend">Ваше общее впечатление:</legend>
           <ul class="impression__list">
@@ -118,7 +126,7 @@
           </ul>
         </fieldset>
       </div>
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--attractions">
         <fieldset class="attractions form__item">
           <legend class="attractions__legend">Посещенные достопримечательности:</legend>
           <ul class="attractions__list">
@@ -130,15 +138,15 @@
             </li>
             <li class="attractions__item option">
               <label class="option__label">
-                <input checked class="option__input option__input--checked" name="slide-park" type="checkbox">
+                <input checked class="option__input option__input--checked" name="bell-rock" type="checkbox">
                 <span class="option__check-box"></span>
-                Слайд-парк</label>
+                Гора-Колокол</label>
             </li>
             <li class="attractions__item option">
               <label class="option__label">
-                <input checked class="option__input option__input--checked" name="bell-rock" type="checkbox">
+                <input checked class="option__input option__input--checked" name="slide-park" type="checkbox">
                 <span class="option__check-box"></span>
-                Гора-колокол</label>
+                Слайд-парк</label>
             </li>
             <li class="attractions__item option">
               <label class="option__label">
@@ -149,7 +157,7 @@
           </ul>
         </fieldset>
       </div>
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--user-comment">
         <fieldset class="user-comment form__item">
           <legend class="user-comment__legend">Опишите свои эмоции:</legend>
           <div class="user-comment__comment">
@@ -159,9 +167,11 @@
           </div>
         </fieldset>
       </div>
-      <div class="form__wrapper">
-        <button class="button form__button" type="submit">Оставить отзыв</button>
-        <p class="form__info">* - Обязательные поля</p>
+      <div class="form__wrapper form__wrapper--button">
+        <button class="button form__button" type="submit">Отправить отзыв</button>
+      </div>
+      <div class="form__wrapper form__wrapper--info">
+      <p class="form__info">* —  Обязательные поля</p>
       </div>
     </form>
   </div>
@@ -214,9 +224,9 @@
 <section class="popup popup--error">
   <div class="popup__content">
     <h2 class="popup__title popup__title--error">Что-то пошло не так!</h2>
-    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <p class="popup__text">Проверьте поля, выделенные красным, скорee всего вы забыли их заполнить</p>
   </div>
-  <button aria-label="Закрыть" class="button popup__button popup__button--review" type="button">Ок</button>
+  <button aria-label="Закрыть" class="button popup__button popup__button--error" type="button">Ок</button>
 </section>
 <section class="popup popup--review">
   <div class="popup__content popup__content--review">

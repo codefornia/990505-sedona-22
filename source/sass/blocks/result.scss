@@ -2,8 +2,18 @@
   position: relative;
   display: block;
   cursor: pointer;
-  padding: 20px 0 20px 60px;
+  padding: 16px 0 28px 65px;
   text-align: left;
+  margin: 0;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 16px 0 16px 62px;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+      padding: 16px 0 16px 67px;
+    }
+  }
 }
 
 .result__input {
@@ -27,8 +37,8 @@
 
 .result__radio {
   position: absolute;
-  left: 1px;
-  top: 7px;
+  left: 0;
+  top: 1px;
   width: 56px;
   height: 56px;
   overflow: hidden;
@@ -44,5 +54,10 @@
 
   &:active {
     background-color: $color-form-down;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    left: 4px;
+    top: 2px;
   }
 }

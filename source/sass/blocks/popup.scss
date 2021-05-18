@@ -11,6 +11,7 @@
   left: 0;
   margin: auto;
   align-items: center;
+  justify-content: center;
   background-color: $color-background-base;
   text-align: center;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
@@ -18,6 +19,7 @@
 
   &--open {
     display: flex;
+    justify-content: center;
   }
 
   &--error {
