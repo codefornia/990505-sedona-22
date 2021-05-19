@@ -40,6 +40,10 @@
     width: 100%;
     height: 20px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+
+    @media (min-width: $breakpoint-tablet-width) {
+      display: none;
+    }
   }
 
   &:not(:first-child) {
@@ -81,10 +85,6 @@
 
     &:active {
       background-color: inherit;
-    }
-
-    &:last-child::after {
-      display: none;
     }
   }
 }
