@@ -1,5 +1,13 @@
 const nav = document.querySelector('.main-nav__list');
 const buttonNav = document.querySelector('.main-nav__toggle');
+
+buttonNav.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    buttonNav.classList.toggle('main-nav__toggle--close');
+    nav.classList.toggle('main-nav__list--close');
+  }
+);
+
 const errorPopup = document.querySelector('.popup--error');
 const reviewPopup = document.querySelector('.popup--review');
 const buttonErrorPopup = errorPopup.querySelector('.popup__button--error');
@@ -10,13 +18,6 @@ const nameInput = document.getElementById('bio-name');
 const surnameInput = document.getElementById('bio-surname');
 const telInput = document.getElementById('user-tel');
 const emailInput = document.getElementById('user-email');
-
-buttonNav.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonNav.classList.toggle('main-nav__toggle--close');
-    nav.classList.toggle('main-nav__list--close');
-  }
-);
 
 buttonReview.addEventListener('click', function (evt) {
   evt.preventDefault();

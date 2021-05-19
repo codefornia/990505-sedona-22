@@ -82,6 +82,10 @@
     &:active {
       background-color: inherit;
     }
+
+    &:last-child::after {
+      display: none;
+    }
   }
 }
 
