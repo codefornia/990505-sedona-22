@@ -31,6 +31,10 @@
     top: 17px;
     opacity: 0.3;
   }
+
+  &:focus-visible + .option__check-box {
+    outline: 5px solid $color-primary;
+  }
 }
 
 .option__check-box {

@@ -23,10 +23,11 @@
   }
 
   &--error {
-    padding: 40px 40px 35px 40px;
+    padding: 40px 45px 35px 45px;
     max-width: 400px;
 
     @media (min-width: $breakpoint-tablet-width) {
+      padding: 39px 45px 50px 45px;
       width: 400px;
     }
   }
@@ -51,8 +52,10 @@
 
 .popup__content {
   &--review {
+    padding: 41px 40px 39px 40px;
+
     @media (min-width: $breakpoint-tablet-width) {
-      padding: 56px 110px 33px 110px;
+      padding: 94px 110px 44px 110px;
     }
   }
 }
@@ -60,13 +63,17 @@
 .popup__title {
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 26px;
 
   @media (min-width: $breakpoint-tablet-width) {
     font-size: 30px;
     line-height: 40px;
+    margin-bottom: 23px;
 
     &--error {
-      padding: 0 73px;
+      margin: 0 auto 24px auto;
+      width: 240px;
     }
   }
 }
@@ -74,4 +81,35 @@
 .popup__text {
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+
+  &--error {
+    margin-bottom: 24px;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+.popup__button {
+  font-size: 18px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 21px;
+  }
+
+  &--error {
+    width: 180px;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      width: 272px;
+    }
+  }
+}
+
+.popup__br {
+  @media (min-width: $breakpoint-desktop-width) {
+    display: none;
+  }
 }

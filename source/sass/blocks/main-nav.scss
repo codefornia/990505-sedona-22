@@ -27,6 +27,10 @@
   }
 }
 
+.main-nav__list--no-js {
+  display: flex;
+}
+
 .main-nav__item {
   font-size: 18px;
   background-color: $color-primary;
@@ -75,8 +79,8 @@
       border: none;
     }
 
-    &:nth-child(2) {
-      margin-right: auto;
+    &:nth-child(4n-2) {
+      margin-right: 20%;
     }
 
     :hover {
@@ -121,6 +125,11 @@
   font-size: 18px;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: -5px;
+  }
 
   @media (min-width: $breakpoint-tablet-width) {
     color: $color-text-primary;

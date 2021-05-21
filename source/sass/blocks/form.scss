@@ -25,10 +25,29 @@
 
   &--button {
     padding: 0 20px;
+    margin-top: -12px;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      margin-top: 0;
+    }
   }
 
   &--info {
     display: none;
+  }
+
+  &--attractions {
+    margin-bottom: 0;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      grid-column-start: -1;
+      grid-column-end: 1;
+      margin-bottom: 41px;
+    }
+
+    @media (min-width: $breakpoint-desktop-width) {
+      margin-bottom: 62px;
+    }
   }
 
   @media (min-width: $breakpoint-tablet-width) {
@@ -50,12 +69,6 @@
       border-right: 1px solid $color-form-hover;
     }
 
-    &--attractions {
-      grid-column-start: -1;
-      grid-column-end: 1;
-      margin-bottom: 41px;
-    }
-
     &--user-comment {
       grid-column-start: -1;
       grid-column-end: 1;
@@ -74,10 +87,6 @@
       margin-top: 67px;
       margin-bottom: 45px;
     }
-  }
-
-  &--attractions {
-    margin-bottom: 62px;
   }
 
   &--user-comment {

@@ -16,6 +16,13 @@
 
   &--booking {
     max-width: 458px;
+    padding-top: 11px;
+    padding-bottom: 20px;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      padding-top: 14px;
+      padding-bottom: 18px;
+    }
   }
 
   &:hover {
@@ -23,6 +30,11 @@
   }
 
   &:focus {
+    background-color: $color-primary-down;
+    color: rgba($color-text-secondary, 0.3);
+  }
+
+  &:active {
     background-color: $color-primary-down;
     color: rgba($color-text-secondary, 0.3);
   }

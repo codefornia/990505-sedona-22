@@ -82,6 +82,11 @@
     outline: 4px solid $color-form-hover;
   }
 
+  &:focus {
+    background-color: inherit;
+    outline: 4px solid $color-form-hover;
+  }
+
   &::placeholder {
     color: $color-text-primary;
   }

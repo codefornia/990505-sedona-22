@@ -28,16 +28,24 @@
   }
 }
 
+.search-booking__br {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    display: inline;
+  }
+}
+
 .search-booking__content {
   margin: 0;
   margin-bottom: 29px;
 
   @media (min-width: $breakpoint-tablet-width) {
-    margin-bottom: 37px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $breakpoint-desktop-width) {
-    padding: 0 302px;
-    margin-bottom: 44px;
+    width: 500px;
+    margin: 0 auto 44px auto;
   }
 }

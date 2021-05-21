@@ -13,7 +13,7 @@
   margin: 0 auto;
   text-align: center;
   min-width: $breakpoint-mobile-width;
-  padding: 0 30px 30px 30px;
+  padding: 76px 30px 30px 30px;
 
   &--index {
     padding: 30px 30px 30px 30px;
@@ -22,13 +22,13 @@
   @media (min-width: $breakpoint-tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 60px 30px 60px;
+    padding: 22px 60px 30px 60px;
     align-items: center;
   }
 
   @media (min-width: $breakpoint-desktop-width) {
     width: $breakpoint-desktop-width;
-    padding: 30px 120px 43px 120px;
+    padding: 23px 120px 43px 120px;
   }
 }
 

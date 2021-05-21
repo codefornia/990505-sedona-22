@@ -36,13 +36,34 @@
 
 .player__icon {
   align-self: center;
-  fill: $color-text-secondary;
+  fill: rgba(92, 104, 112, 1);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    fill: $color-text-secondary;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .player__button {
   align-self: center;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   &:not(:first-child) {
     margin-left: 20px;
@@ -95,6 +116,7 @@
     background-color: $color-text-secondary;
     border-radius: 50%;
     transform: translate(0, -50%);
+    cursor: pointer;
 
     @media (min-width: $breakpoint-tablet-width) {
       left: 148px;

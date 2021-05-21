@@ -18,6 +18,10 @@
   &:not(:last-child) {
     margin-right: 6px;
   }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    margin: 6px 6px 7px -2px;
+  }
 }
 
 .social-list__link {

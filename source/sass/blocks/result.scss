@@ -56,6 +56,10 @@
     background-color: $color-form-down;
   }
 
+  &:focus-visible + .result__radio {
+    outline: 5px solid $color-primary;
+  }
+
   @media (min-width: $breakpoint-desktop-width) {
     left: 4px;
     top: 2px;

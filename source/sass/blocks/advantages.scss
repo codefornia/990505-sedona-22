@@ -95,11 +95,11 @@
     box-sizing: border-box;
 
     @media (min-width: $breakpoint-tablet-width) {
-      padding: 40px 10px 40px 10px;
+      padding: 40px 10px 43px 10px;
     }
 
     @media (min-width: $breakpoint-desktop-width) {
-      padding: 42px 20px 59px 20px;
+      padding: 42px 20px 62px 20px;
     }
   }
 
@@ -123,6 +123,10 @@
   @media (min-width: $breakpoint-tablet-width) {
     padding: 18px 0 17px 0;
     width: auto;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 13px 0 17px 0;
   }
 
   &--first {
@@ -175,15 +179,22 @@
 
   @media (min-width: $breakpoint-tablet-width) {
     padding: 0 30px;
+    line-height: 21px;
 
     &--small {
-      padding: 0 44px;
+      padding: 0 45px;
     }
   }
 
   @media (min-width: $breakpoint-desktop-width) {
-    &--less {
-      padding: 0 83px;
+    padding: 0 85px;
+
+    &--small {
+      padding: 0 51px;
+    }
+
+    &--normal {
+      padding: 0 31px;
     }
   }
 }
