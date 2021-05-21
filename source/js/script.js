@@ -11,7 +11,7 @@ const surnameInput = document.getElementById('bio-surname');
 const telInput = document.getElementById('user-tel');
 const emailInput = document.getElementById('user-email');
 
-document.querySelector('.main-nav__list--no-js').classList.remove('main-nav__list--no-js');
+document.querySelector('.main-nav__list--no-js')?.classList.remove('main-nav__list--no-js');
 
 buttonNav?.addEventListener('click', function (evt) {
     evt.preventDefault();
