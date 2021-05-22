@@ -1,0 +1,67 @@
+.result {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 16px 0 28px 65px;
+  text-align: left;
+  margin: 0;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 16px 0 16px 62px;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+      padding: 16px 0 16px 67px;
+    }
+  }
+}
+
+.result__input {
+  appearance: none;
+
+  &:checked + .result__radio::before {
+    content: url("../../img/icons/radio.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+  }
+
+  &:active + .result__radio::before {
+    content: url("../../img/icons/radio.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    opacity: 0.3;
+  }
+
+  &:focus-visible + .result__radio {
+    outline: 5px solid $color-primary;
+  }
+}
+
+.result__radio {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $color-tertiary;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  &:hover {
+    background-color: $color-form-hover;
+  }
+
+  &:active {
+    background-color: $color-form-down;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    left: 4px;
+    top: 2px;
+  }
+}

@@ -1,0 +1,60 @@
+.option__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  text-align: left;
+  padding: 20px 0 20px 68px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 22px 0 20px 68px;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 22px 5px 20px 69px;
+  }
+}
+
+.option__input {
+  appearance: none;
+
+  &:checked + .option__check-box::before {
+    content: url("../../img/icons/tick.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+  }
+
+  &:active + .option__check-box::before {
+    content: url("../../img/icons/tick.svg");
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    opacity: 0.3;
+  }
+
+  &:focus-visible + .option__check-box {
+    outline: 5px solid $color-primary;
+  }
+}
+
+.option__check-box {
+  position: absolute;
+  left: 1px;
+  top: 7px;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: $color-tertiary;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+
+  &:hover {
+    background-color: $color-form-hover;
+  }
+
+  &:active {
+    background-color: $color-form-down;
+  }
+}

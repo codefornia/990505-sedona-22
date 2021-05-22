@@ -1,23 +1,81 @@
 .page-main {
   position: relative;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .page-main__wrapper {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative;
   text-align: center;
   min-width: $breakpoint-mobile-width;
 
-  @media (min-width: $breakpoint-desktop-width) {
-    width: $breakpoint-desktop-width;
-    margin: 0 auto;
+  &--form {
+    padding-top: 36px;
+
+    @media (min-width: $breakpoint-tablet-width) {
+      margin-top: 25px;
+      margin-bottom: 66px;
+    }
+
+    @media (min-width: $breakpoint-desktop-width) {
+      margin-top: 110px;
+      margin-bottom: 72px;
+      padding: 0;
+    }
   }
 }
 
 .page-main__gallery {
   margin: 0 auto;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding: 33px 0 0 0;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    padding: 64px 20px 50px 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 101px 0 62px 0;
+  }
+}
+
+.page-main__title {
+  font-size: 18px;
+  margin: 0;
+  line-height: 26px;
+  padding: 0 20px 28px 20px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    font-size: 30px;
+    padding: 2px 21px 33px 20px;
+  }
+}
+
+.page-main__text {
+  margin: 0;
+  padding: 0 20px 18px 20px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 437px;
+    margin: 0 auto;
+    padding: 0 20px 85px 20px;
+  }
+
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 437px;
+    margin: 0 auto;
+    padding: 0 20px 56px 20px;
+  }
+}
+
+.page-main__form {
+  margin-bottom: 0;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    margin-bottom: 66px;
+  }
 }

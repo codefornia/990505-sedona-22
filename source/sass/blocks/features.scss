@@ -11,10 +11,17 @@
 .features__list {
   margin: 0;
   list-style: none;
-  padding: 26px 18px 26px 18px;
+  padding: 25px 20px 16px 20px;
 
   @media (min-width: $breakpoint-tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 45px;
+    padding: 45px 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 45px 24px 64px 24px;
   }
 }
 
@@ -22,21 +29,40 @@
   list-style: none;
   background-color: $color-background-base;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: $breakpoint-tablet-width) {
     flex-direction: column;
     align-items: center;
+
+    &--souvenirs {
+      order: 1;
+    }
   }
 }
 
 .features__text {
   text-align: left;
-  padding: 0 15px;
+  padding: 8px 9px 0 9px;
+
+  &--small {
+    padding: 9px 9px 0 12px;
+  }
 
   @media (min-width: $breakpoint-tablet-width) {
     text-align: center;
-    padding: 30px;
+
+    &--small {
+      padding: 6px 30px 0 30px;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 10px 9px 0 9px;
+
+    &--small {
+      padding: 10px 9px 0 9px;
+    }
   }
 }
 
@@ -44,37 +70,65 @@
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 
   @media (min-width: $breakpoint-tablet-width) {
     font-size: 21px;
-  }
-
-  @media (min-width: $breakpoint-tablet-width) {
-    font-size: 21px;
+    margin-bottom: 23px;
   }
 }
 
 .features__desc {
   font-size: 14px;
   margin: 0;
+  line-height: 22px;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    line-height: 21px;
+
+    &--small {
+      padding: 0 19px;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-width) {
+    padding: 0 23px;
+  }
+}
+
+.features__br {
+  display: none;
+
+  @media (min-width: $breakpoint-desktop-width) {
+    display: inline;
+  }
+}
+
+.features__icon-wrapper {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-tablet-width) {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 .features__icon {
   @media (min-width: $breakpoint-tablet-width) {
+    height: 100px;
+
     &--accommodation {
-      height: 72px;
       width: 75px;
     }
 
     &--food {
-      width: 68px;
-      height: 76px;
+      width: 76px;
     }
 
     &--souvenirs {
       width: 64px;
-      height: 75px;
     }
   }
 }
