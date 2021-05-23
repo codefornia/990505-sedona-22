@@ -39,12 +39,12 @@
   &:active {
     background-color: $color-primary-down;
   }
+
+  &:active .social-list__icon {
+    opacity: 0.3;
+  }
 }
 
 .social-list__icon {
   align-self: center;
-
-  &:active {
-    opacity: 0.3;
-  }
 }

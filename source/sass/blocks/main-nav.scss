@@ -108,9 +108,19 @@
   background-image: url("../../img/icons/icon-cross.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--close {
     background-image: url("../../img/icons/icon-menu.svg");
+    opacity: 1;
   }
 
   @media (min-width: $breakpoint-tablet-width) {
@@ -136,16 +146,25 @@
     font-size: 14px;
   }
 
-  &--active {
-    color: rgba(118, 99, 87, 1);
-  }
-
   &:hover {
     color: $color-primary;
   }
 
   &:focus {
     color: rgba($color-text-primary, 0.3);
+  }
+
+  &--active {
+    color: rgba(118, 99, 87, 1);
+
+    &:hover {
+      color: rgba(96, 78, 67, 1);
+    }
+
+    &:hover:active {
+      color: rgba(118, 99, 87, 1);
+      opacity: 0.3;
+    }
   }
 }
 
